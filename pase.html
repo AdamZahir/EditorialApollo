@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pase de Entrada - Editorial Apollo</title>
+  <link rel="stylesheet" href="estilo_empleados.css">
+</head>
+<body>
+  <header>Pase de Entrada</header>
+
+  <div class="formulario" id="mensaje">
+ 
+  </div>
+
+  <footer>© 2025 Editorial Apollo</footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const tipo = params.get('tipo');
+    const mensajeDiv = document.getElementById('mensaje');
+
+    if(tipo === 'empleado'){
+      const nombre = params.get('nombre');
+      const area = params.get('area');  
+
+      mensajeDiv.innerHTML = `<h2>Adelante, ${nombre}.</h2>
+        <p>Ha registrado su entrada al área de <strong>${area}</strong>.</p>
+        <p>Disfrute su estadía.</p>`;
+    }
+    else if(tipo === 'visitante'){
+      const nombre = params.get('nombre');
+
+      mensajeDiv.innerHTML = `<h2>Adelante, ${nombre}.</h2>
+        <p>Disfrute su estadía.</p>`;
+    }
+    else{
+      mensajeDiv.innerHTML = `<p>No se recibieron datos del formulario.</p>`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Visitantes - Editorial Apollo</title>
+  <link rel="stylesheet" href="estilo_visitantes.css">
+</head>
+<body>
+  <header>Registro de Visitantes</header>
+
+  <form class="formulario" action="registrar_visitante.php" method="post">
+
+   <!-- <form class="formulario" action="pase.html" method="get"> -->
+    <input type="hidden" name="tipo" value="visitante">
+
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="empresa">Empresa / Organización de la que viene:</label>
+    <input type="text" id="empresa" name="empresa">
+
+    <label for="piso">Piso / Departamento a visitar:</label>
+    <select id="piso" name="piso" required>
+      <option value="">-- Seleccionar --</option>
+      <option value="recepcion">Recepción</option>
+      <option value="editorial">Editorial</option>
+      <option value="diseno">Diseño</option>
+      <option value="almacen">Almacén</option>
+    </select>
+
+    <button type="submit" class="boton">Registrar entrada</button>
+  </form>
+
+  <footer>© 2025 Editorial Apollo</footer>
+</body>
+</html>

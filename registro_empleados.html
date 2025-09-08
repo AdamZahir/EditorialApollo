@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Empleados - Editorial Apollo</title>
+  <link rel="stylesheet" href="estilo_empleados.css">
+</head>
+<body>
+  <header>Registro de Empleados</header>
+
+  <form class="formulario" action="registrar_empleado.php" method="post">
+
+   <!-- <form class="formulario" action="pase.html" method="get"> -->
+    <input type="hidden" name="tipo" value="empleado">
+
+    <label for="id_empleado">ID de empleado:</label>
+    <input type="text" id="id_empleado" name="id_empleado" required>
+
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="area">Área / Departamento:</label>
+    <select id="area" name="area" required>
+      <option value="">-- Seleccionar --</option>
+      <option value="recepcion">Recepción</option>
+      <option value="editorial">Editorial</option>
+      <option value="diseno">Diseño</option>
+      <option value="almacen">Almacén</option>
+      <option value="marketing">Marketing</option>
+      <option value="administracion">Administración</option>
+    </select>
+ 
+    <button type="submit" class="boton">Registrar entrada</button>
+  </form>
+
+  <footer>© 2025 Editorial Apollo</footer>
+</body>
+</html>
